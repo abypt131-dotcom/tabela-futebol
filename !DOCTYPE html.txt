@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tabela Analítica de Desempenho</title>
+<style>
+  body {
+    font-family: "Segoe UI", sans-serif;
+    background: #f5f7fa;
+    margin: 20px;
+  }
+  .controls {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 15px;
+  }
+  button {
+    background: #1a73e8;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    padding: 10px 14px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background 0.2s ease-in-out;
+  }
+  button:hover {
+    background: #1558b0;
+  }
+  button.secondary {
+    background: #34a853;
+  }
+  button.secondary:hover {
+    background: #2c8a45;
+  }
+  button.export {
+    background: #fbbc04;
+    color: #333;
+  }
+  button.export:hover {
+    background: #e0a800;
+  }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    border-radius: 10px;
+    overflow: hidden;
+  }
+  thead {
+    background: #1a73e8;
+    color: white;
+  }
+  th, td {
+    padding: 10px;
+    text-align: center;
+  }
+  tbody tr:nth-child(even) { background: #f9f9f9; }
+  tbody tr:nth-child(odd) { background: #e8f0fe; }
+  td.highlight { background: #fff8b3; font-weight: bold; }
+  td.good { color: #0b9444; font-weight: 600; }
+  td.bad { color: #c62828; font-weight: 600; }
+  caption {
+    caption-side: top;
+    margin-bottom: 8px;
+    font-size: 1.1em;
+    font-weight: bold;
+    color: #333;
+  }
+</style>
+</head>
+<body>
+
+  <div class="controls">
+    <button onclick="atualizarTabela()">🔄 Atualizar Dados</button>
+    <button class="secondary" onclick="mostrarGrafico()">📈 Ver Gráfico</button>
+    <button class="export" onclick="exportarExcel()">📊 Exportar para Excel</button>
+  </div>
+
+  <table id="tabelaDesempenho">
+    <caption>📊 Tabela Analítica de Desempenho — Barcelona x Olympiacos</caption>
+    <thead>
+      <tr>
+        <th>Dado</th>
+        <th>Quem</th>
+        <th>Time</th>
+        <th>Jogo 1</th>
+        <th>Jogo 2</th>
+        <th>Jogo 3</th>
+        <th>Adversário</th>
+        <th>Jogo 1</th>
+        <th>Jogo 2</th>
+        <th>Jogo 3</th>
+        <th>Observação</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Escant. 1ºT</td><td>TEVE</td><td>Barcelona</td>
+        <td>4</td><td>3</td><td class="highlight bad">1</td>
+        <td>Olympiacos</td><td>2</td><td>5</td><td>5</td>
+        <td class="bad">Barcelona caiu nos últimos 2 jogos</td>
+      </tr>
+      <tr>
+        <td>Escant. 1ºT</td><td>CEDEU</td><td>Barcelona</td>
+        <td>1</td><td>0</td><td>0</td>
+        <td>Olympiacos</td><td>3</td><td>2</td><td>4</td>
+        <td class="bad">Olympiacos cedeu muito no último jogo</td>
+      </tr>
+      <tr>
+        <td>Chutes</td><td>TEVE</td><td>Barcelona</td>
+        <td>14</td><td>15</td><td class="good">11</td>
+        <td>Olympiacos</td><td>17</td><td>12</td><td>15</td>
+        <td class="good">Barcelona mantém alta produção ofensiva</td>
+      </tr>
+      <tr>
+        <td>Chutes</td><td>CEDEU</td><td>Barcelona</td>
+        <td>6</td><td>9</td><td>8</td>
+        <td>Olympiacos</td><td>10</td><td>12</td><td>11</td>
+        <td class="bad">Olympiacos sofre pressão constante</td>
+      </tr>
+    </tbody>
+  </table>
+
+<script>
+function atualizarTabela() {
+  alert("🔄 Atualização de dados simulada. Em integração real, os dados seriam recarregados automaticamente do Excel ou API.");
+}
+function mostrarGrafico() {
+  alert("📈 Função de gráfico ainda não implementada. Pode ser conectada ao Chart.js ou Google Charts.");
+}
+function exportarExcel() {
+  alert("📊 Exportação para Excel simulada. Em ambiente real, pode-se usar SheetJS (XLSX.js).");
+}
+</script>
+
+</body>
+</html>
